@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import Train from "../components/Train.js"
 
-export default function TrainList() {
-    // initialize some currColor state
+export default function TrainList(props) {
+    const{ color, data } = props;
   
     return (
       <div>
-        <NavBar color={currColor} data={stationData} />
+        {data ? data.map((train) => 
+          <Train train={train}/>
+        ) : <div>Loading...</div>}
       </div>
     );
 }
