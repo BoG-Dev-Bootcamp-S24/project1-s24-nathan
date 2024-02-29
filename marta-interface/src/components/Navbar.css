@@ -1,0 +1,28 @@
+.navBox {
+    width: 25%;
+    background-color: rgb(55, 52, 52);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 130%;
+    padding: 3%;
+    color: lightgrey;
+
+    .stationList {
+        display: flex;
+        flex-direction: column;
+
+        .stationButton {
+            display: flex;
+            justify-content: flex-start;
+            background-color: rgb(55, 52, 52);
+            border: 0px solid black;
+            border-bottom: white 1px solid;
+            margin-top: 5%;
+
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+            font-size: 120%;
+        }
+    }
+}

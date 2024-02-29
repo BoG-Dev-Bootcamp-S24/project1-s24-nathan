@@ -1,0 +1,41 @@
+.box {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    .colorButtons {
+        display: flex;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        justify-content: space-around;
+
+        .button {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 150%;
+            color: white;
+            width: 10%;
+            aspect-ratio: 3/1;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        
+    }
+
+    .colorHeader {
+        display: flex;
+        justify-content: center;
+        font-size: 400%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border: 1px gray solid;
+    }
+
+    .mainBox {
+        display: flex;
+        flex-direction: row;
+    }
+}
