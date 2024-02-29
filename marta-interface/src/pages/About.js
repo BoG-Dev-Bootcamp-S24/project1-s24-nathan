@@ -1,23 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import "./Home.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./About.css";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import trainImage from "./img/martaTrain2.jpeg";
 
 export default function About() {
+    const navigate = useNavigate();
     
     return (
         <div class="body">
             <div class="header">
-                <div class="aboutButton"></div>
+                <button class="backButton" onClick={() => navigate("/")}>Back</button>
                 <div>MARTA</div>
-                <button class="aboutButton" onClick={() => navigate("/about")}>About MARTA</button>
+                <div class="backButton"></div>
             </div>
             <div class="mainBox">
-                <div class="routes">
-                    <div class="routesHeader">VIEW ROUTES SCHEDULE</div>
-                    <button class="routeButton" onClick={() => navigate("/lines/gold")}><span style={{color:'gold'}}>Gold</span>&#8205; Line</button>
-                    <button class="routeButton" onClick={() => navigate("/lines/red")}><span style={{color:'red'}}>Red</span>&#8205; Line</button>
-                    <button class="routeButton" onClick={() => navigate("/lines/blue")}><span style={{color:'blue'}}>Blue</span>&#8205; Line</button>
-                    <button class="routeButton" onClick={() => navigate("/lines/green")}><span style={{color:'green'}}>Green</span>&#8205; Line</button>
+                <div class="bioBox">
+                    <div class="bioHeader" style={{fontSize:'250%'}}>At MARTA</div>
+                    <div class="bioHeader">Our Vision</div>
+                    People taking People where they want to go today and tomorrow.
+                    <div class="bioHeader">Our Mission</div>
+                    To advocate for and provide safe, multimodal transit services that advance prosperity, connectivity and equity for a more livable region.
+                    <div class="bioHeader">Our Priorities</div>
+                    Everyday, we will do our part at MARTA to operate a transit system that:
+                    <ul>
+                        <li>Consistently provides excellence in customer service</li>
+                        <li>Delivers the capital program with speed and efficiency</li>
+                        <li>Strengthens the MARTA brand</li>
+                        <li>Demonstrates fiscal responsibility</li>
+                    </ul>
                 </div>
                 <img src={trainImage} class="trainImage"/>
             </div>
