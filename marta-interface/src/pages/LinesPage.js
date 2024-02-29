@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Navbar from "../components/Navbar.js";
 import TrainList from "./TrainList.js";
 import "./LinesPage.css";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 
 export default function LinesPage() {
     // initialize some currColor state
+    const {color} = useParams();
     const URL = "https://midsem-bootcamp-api.onrender.com"
-    const [currColor, setCurrColor] = useState('gold');
+    const [currColor, setCurrColor] = useState(color);
     const [stationData, setStationData] = useState([]);
     const [trainData, setTrainData] = useState([]);
     const [loading, setLoading] = useState(true);
